@@ -29,11 +29,11 @@ if option == "Top Data":
     if visibility == "About Transactions" and not quarterly:
         st.write("To visualize top transaction data")
 
-        # CONNECTING WITH MYSQL DATABASE
+       
         mydb = sql.connect(
             host="localhost",
-            user="root",
-            password="123412341234",
+            user="****",
+            password="****",
             database="phonepe_data"
         )
 
@@ -44,14 +44,14 @@ if option == "Top Data":
         mycursor.execute(query)
 
 
-        # Fetch all the rows returned by the query
+       
         rows = mycursor.fetchall()
 
         toptrans = pd.DataFrame(rows, columns=['State', 'Year', 'Quarter', 'Pincode', 'Transaction_count',
                                           'Transaction_amount', 'Pincode_log', 'Transaction_count_log',
                                           'Transaction_amount_log'])
 
-        # Close the cursor and the database connection
+       
         mycursor.close()
         mydb.close()
 
@@ -77,11 +77,11 @@ if option == "Top Data":
         year_options = [2018,2019,2020, 2021, 2022]
         year_selection = st.selectbox("Select a year", year_options, key="year_selection")
 
-        # CONNECTING WITH MYSQL DATABASE
+       
         mydb = sql.connect(
             host="localhost",
-            user="root",
-            password="123412341234",
+            user="****",
+            password="****",
             database="phonepe_data"
             )
 
@@ -90,13 +90,13 @@ if option == "Top Data":
         query = f"SELECT * FROM {table_name} WHERE Year = '{year_selection}' "
         mycursor.execute(query)
 
-        # Fetch all the rows returned by the query
+       
         rows = mycursor.fetchall()
         toptrans = pd.DataFrame(rows, columns=['State', 'Year', 'Quarter', 'Pincode', 'Transaction_count',
                                                'Transaction_amount', 'Pincode_log', 'Transaction_count_log',
                                                 'Transaction_amount_log'])
 
-        # Close the cursor and the database connection
+        
         mycursor.close()
         mydb.close()
 
@@ -122,11 +122,11 @@ if option == "Top Data":
 
     elif visibility == "About Users" and not quarterly:
         st.write("To Visualize top user data")
-        # CONNECTING WITH MYSQL DATABASE
+       
         mydb = sql.connect(
             host="localhost",
-            user="root",
-            password="123412341234",
+            user="****",
+            password="****",
             database="phonepe_data"
         )
 
@@ -137,12 +137,12 @@ if option == "Top Data":
         mycursor.execute(query)
 
 
-        # Fetch all the rows returned by the query
+        
         rows = mycursor.fetchall()
 
         topuser = pd.DataFrame(rows, columns=['State', 'Year', 'Quarter', 'Pincode', 'RegisteredUsers', 'Pincode_log','RegisteredUsers_log'])
 
-        # Close the cursor and the database connection
+       
         mycursor.close()
         mydb.close()
 
@@ -169,11 +169,11 @@ if option == "Top Data":
         year_options = [2018,2019,2020, 2021, 2022]
         year_selection = st.selectbox("Select a year", year_options, key="year_selection")
 
-        # CONNECTING WITH MYSQL DATABASE
+        
         mydb = sql.connect(
             host="localhost",
-            user="root",
-            password="123412341234",
+            user="****",
+            password="****",
             database="phonepe_data"
             )
 
@@ -182,11 +182,11 @@ if option == "Top Data":
         query = f"SELECT * FROM {table_name} WHERE Year = '{year_selection}' "
         mycursor.execute(query)
 
-        # Fetch all the rows returned by the query
+        
         rows = mycursor.fetchall()
         topuser = pd.DataFrame(rows, columns=['State', 'Year', 'Quarter', 'Pincode', 'RegisteredUsers', 'Pincode_log','RegisteredUsers_log'])
 
-        # Close the cursor and the database connection
+        
         mycursor.close()
         mydb.close()
 
@@ -220,11 +220,11 @@ elif option =="All Data":
     if visibility == "About Transactions" and not quarterly:
         st.write("To visualize Aggregated transaction data")
 
-        # CONNECTING WITH MYSQL DATABASE
+       
         mydb = sql.connect(
             host="localhost",
-            user="root",
-            password="123412341234",
+            user="****",
+            password="****",
             database="phonepe_data"
         )
 
@@ -235,14 +235,14 @@ elif option =="All Data":
         mycursor.execute(query)
 
 
-        # Fetch all the rows returned by the query
+        
         rows = mycursor.fetchall()
 
         aggtrans = pd.DataFrame(rows, columns=['Unnamed: 0',
                                                'State', 'Year', 'Quarter', 'Transaction_type','Transaction_count',
                                                'Transaction_amount', 'Transaction_count_log','Transaction_amount_log'])
 
-        # Close the cursor and the database connection
+        
         mycursor.close()
         mydb.close()
 
@@ -268,11 +268,11 @@ elif option =="All Data":
         year_options = [2018,2019,2020, 2021, 2022]
         year_selection = st.selectbox("Select a year", year_options, key="year_selection")
 
-        # CONNECTING WITH MYSQL DATABASE
+       
         mydb = sql.connect(
             host="localhost",
-            user="root",
-            password="123412341234",
+            user="****",
+            password="****",
             database="phonepe_data"
             )
 
@@ -281,13 +281,13 @@ elif option =="All Data":
         query = f"SELECT * FROM {table_name} WHERE Year = '{year_selection}' "
         mycursor.execute(query)
 
-        # Fetch all the rows returned by the query
+        
         rows = mycursor.fetchall()
         aggtrans = pd.DataFrame(rows, columns=['Unnamed_0',
                                                'State', 'Year', 'Quarter', 'Transaction_type','Transaction_count',
                                                'Transaction_amount', 'Transaction_count_log','Transaction_amount_log'])
 
-        # Close the cursor and the database connection
+        
         mycursor.close()
         mydb.close()
 
@@ -313,11 +313,11 @@ elif option =="All Data":
 
     elif visibility == "About Users" and not quarterly:
         st.write("To Visualize Aggregated user data")
-        # CONNECTING WITH MYSQL DATABASE
+        
         mydb = sql.connect(
             host="localhost",
-            user="root",
-            password="123412341234",
+            user="****",
+            password="****",
             database="phonepe_data"
         )
 
@@ -328,12 +328,12 @@ elif option =="All Data":
         mycursor.execute(query)
 
 
-        # Fetch all the rows returned by the query
+        
         rows = mycursor.fetchall()
 
         agguser = pd.DataFrame(rows, columns=['Unnamed_0', 'State', 'Year', 'Quarter', 'brands', 'Count','Percentage', 'Count_log', 'Percentage_log'])
 
-        # Close the cursor and the database connection
+        
         mycursor.close()
         mydb.close()
 
@@ -360,11 +360,11 @@ elif option =="All Data":
         year_options = [2018,2019,2020, 2021, 2022]
         year_selection = st.selectbox("Select a year", year_options, key="year_selection")
 
-        # CONNECTING WITH MYSQL DATABASE
+        
         mydb = sql.connect(
             host="localhost",
-            user="root",
-            password="123412341234",
+            user="****",
+            password="****",
             database="phonepe_data"
             )
 
@@ -373,11 +373,11 @@ elif option =="All Data":
         query = f"SELECT * FROM {table_name} WHERE Year = '{year_selection}' "
         mycursor.execute(query)
 
-        # Fetch all the rows returned by the query
+        
         rows = mycursor.fetchall()
         agguser = pd.DataFrame(rows, columns=['Unnamed_0', 'State', 'Year', 'Quarter', 'brands', 'Count','Percentage', 'Count_log', 'Percentage_log'])
 
-        # Close the cursor and the database connection
+        
         mycursor.close()
         mydb.close()
 
@@ -399,18 +399,6 @@ elif option =="All Data":
                                 )
             fig.update_geos(fitbounds="locations", visible=False)
             st.plotly_chart(fig)
-
-        
-
-    
-    
-
-
-
-
-    
-
-
 
 
 
