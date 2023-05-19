@@ -37,14 +37,7 @@ Once the application is running, you can use it to visualize different aspects o
 - Select a column for color to customize the visualization.
 - Click the "Visualize" button to generate the choropleth map.
 
-## ## Project Overview
-Once the application is running, you can use it to visualize different aspects of the Phonepe Pulse data:
 
-- Select the "Top Data" / "All Data" option to visualize top/aggregate transaction or user data.
-- Choose whether to visualize data for all years or select a specific year.
-- If available, choose to visualize data on a quarterly basis.
-- Select a column for color to customize the visualization.
-- Click the "Visualize" button to generate the choropleth map.
 
 ## Contributing
 
